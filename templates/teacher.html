@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Teacher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            background: linear-gradient(0, #c850c0, #4158d0);
+        }
+
+        .data {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header h1 {
+            padding: 20px 0px;
+            text-align: center;
+
+        }
+
+
+        .result {
+            display: flex;
+            justify-content: center;
+            min-height: 389px;
+            min-width: 576px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.25);
+            transition: all 0.5s ease;
+            margin: 40px 0px;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #fff9f93b;
+            border-radius: 3px;
+
+        }
+
+        .result img {
+            min-height: 360px;
+            min-width: 576px;
+        }
+
+        .result:hover {
+            border: 1px solid #ccc;
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- for data  -->
+
+    <header>
+        <h1>Analysed Report</h1>
+    </header>
+
+    <div class="data">
+
+        <div class="result">
+            <img src="data:image/png;base64,{{ fig1 }}" alt="Scatter Plot">
+        </div>
+
+
+        {% for image in countplots %}
+        <div class="result">
+            <img src="data:image/png;base64,{{ image }}" alt="Count Plot">
+        </div>
+        {% endfor %}
+
+        <div class="result">
+            <img src="data:image/png;base64,{{ fig2 }}" alt="Scatter Plot">
+        </div>
+
+        <div class="result">
+            <img src="data:image/png;base64,{{ fig3 }}" alt="Scatter Plot">
+        </div>
+    </div>
+
+
+</body>
+
+</html>

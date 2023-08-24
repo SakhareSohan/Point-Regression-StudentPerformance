@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Information</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(0, #c850c0, #4158d0);
+        }
+
+        header h1 {
+            text-align: center;
+           margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color:#fff9f93b;
+            height: 640px;
+            width: 623px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.25);
+
+        }
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 700px;
+        }
+
+
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        div {
+            border-radius: 5px;
+            background-color: #fffefe;
+            padding: 20px;
+        }
+
+
+
+        /* for submit */
+
+        button {
+            font-size: 22px;
+            font-family: monospace;
+            background-color: #f3f7fe;
+            color: #3b82f6;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            height: 45px;
+            transition: .3s;
+            border: 2px solid black;
+            margin-top: 30px;
+            /* box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff; */
+        }
+
+        button:hover {
+            background-color:#df3bf6;
+            box-shadow: 0 0 0 5px #3b83f65f;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Student Information</h1>
+    </header>
+    <main>
+        <div class="container">
+
+
+
+            <form action="/student" method="post">
+                <label for="fname">Hours Studied</label>
+                <input type="text" id="fname" name="Hours Studied" placeholder="Ex 7">
+    
+                <label for="lname">Preous Scores</label>
+                <input type="text" id="lname" name="Previous Scores" placeholder="Ex 75">
+    
+                <label for="lname">Extracurricular Activities</label>
+                <input type="text" id="lname" name="Extracurricular Activities" placeholder="Ex YES">
+    
+                <label for="lname">Sleep Hours</label>
+                <input type="text" id="lname" name="Sleep Hours" placeholder="Ex 8">
+    
+                <label for="lname">Sample Question Paper Pratice</label>
+                <input type="text" id="lname" name="Sample Question Papers Practiced" placeholder="Ex 4">
+    
+                <label for="lname">Performance index</label>
+                <input type="text" id="lname" name="Performance Index" placeholder="Ex 99">
+    
+                <!-- <input type="submit" value="Submit"> -->
+    
+                <button>SUBMIT</button>
+    
+            </form>
+        </div>
+    
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

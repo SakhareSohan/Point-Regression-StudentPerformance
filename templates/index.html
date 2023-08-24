@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            background: linear-gradient(0, #c850c0, #4158d0);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            text-align: center;
+            padding: 5px;
+            padding: 20px 0px;
+            background-color: #cda0f100;
+            color: #fff;
+
+
+        }
+
+
+
+        button a {
+            text-decoration: none;
+        }
+
+        /* From uiverse.io by @Ali-Tahmazi99 */
+        button {
+            display: inline-block;
+            width: 238px;
+            height: 62px;
+            border-radius: 10px;
+            /* border: 1px solid #03045e; */
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5;
+            z-index: 1;
+            margin: 20px;
+            font-size: 20px;
+            transition: all 0.6s;
+            margin-top: 57px;
+
+        }
+
+        button:hover {
+            color: white;
+            transform: scale(1.03);
+        }
+
+        button::before,
+        button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 0;
+            height: 100%;
+            transform: skew(15deg);
+            transition: all 0.5s;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        button::before {
+            left: -10px;
+            background: #240046;
+        }
+
+        button::after {
+            right: -10px;
+            background: #5a189a;
+        }
+
+        button:hover::before,
+        button:hover::after {
+            width: 58%;
+        }
+
+        button:hover span {
+            color: #e0aaff;
+            transition: 0.3s;
+        }
+
+        button span {
+            color: #03045e;
+            font-size: 18px;
+            transition: all 0.3s ease-in;
+        }
+
+        .container {
+            flex-wrap: wrap;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            min-height: 561px;
+            width: 100% !important;
+
+        }
+
+        .parent {
+            width: 300px;
+            padding: 20px;
+            perspective: 1000px;
+            height: 377px;
+            margin: 0px 50px;
+        }
+
+        .card {
+            border-radius: 14px;
+            padding-top: 50px;
+            /* border-radius: 10px; */
+            border: 3px solid rgb(255, 255, 255);
+            transform-style: preserve-3d;
+            background: linear-gradient(135deg, #0000 18.75%, #f3f3f3 0 31.25%, #0000 0),
+                repeating-linear-gradient(45deg, #cc80e8 -6.25% 6.25%, #ffffff 0 18.75%);
+            background-size: 60px 60px;
+            background-position: 0 0, 0 0;
+            background-color: #f0f0f0;
+            width: 100%;
+            height: 100%;
+            box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .card:hover {
+            background-position: -100px 100px, -100px 100px;
+            transform: rotate3d(0.5, 1, 0, 30deg);
+        }
+
+        .content-box {
+            background: #9E7BFE;
+            /* border-radius: 10px 121px 10px 10px; */
+            transition: all 0.5s ease-in-out;
+            padding: 63px 25px 50px 25px;
+            transform-style: preserve-3d;
+        }
+
+        .content-box .card-title {
+            display: inline-block;
+            color: white;
+            font-size: 25px;
+            font-weight: 900;
+            transition: all 0.5s ease-in-out;
+            transform: translate3d(0px, 0px, 50px);
+        }
+
+        .content-box .card-title:hover {
+            transform: translate3d(0px, 0px, 60px);
+        }
+
+        .content-box .card-content {
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #f2f2f2;
+            transition: all 0.5s ease-in-out;
+            transform: translate3d(0px, 0px, 30px);
+        }
+
+        .content-box .card-content:hover {
+            transform: translate3d(0px, 0px, 60px);
+        }
+
+        .content-box .see-more {
+            cursor: pointer;
+            margin-top: 1rem;
+            display: inline-block;
+            font-weight: 900;
+            font-size: 9px;
+            text-transform: uppercase;
+            color: rgba(108, 7, 255, 0.55);
+            border-radius: 5px;
+            background: white;
+            padding: 0.5rem 0.7rem;
+            transition: all 0.5s ease-in-out;
+            transform: translate3d(0px, 0px, 20px);
+        }
+
+        .content-box .see-more:hover {
+            transform: translate3d(0px, 0px, 60px);
+        }
+
+        .image1 {
+            background-image: url("../src/graduated.png");
+            background-size: cover;
+        }
+
+        .image2 {
+            background-image: url("../src/teacher.png");
+            background-size: cover;
+        }
+
+        .image {
+
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            height: 80px;
+            width: 80px;
+            background-color: #fff;
+            border: 1px solid rgba(87, 161, 255, 0.84);
+            /* border-radius: 10px; */
+            padding: 30px;
+            transform: translate3d(0px, 0px, 80px);
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Login</h1>
+    </header>
+    <div class="container">
+
+
+        <div class="parent">
+            <div class="card">
+                <div class="content-box">
+                    <span class="card-title">Teacher</span>
+                    <p class="card-content">
+                        Click below button to see the analysed report.
+                    </p>
+                    <span class="see-more" onclick="link2()">Click Here</span>
+                </div>
+                <div class="image2 image">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="parent">
+            <div class="card">
+                <div class="content-box">
+                    <span class="card-title">Student</span>
+                    <p class="card-content">
+                        Click below button to submit the data.
+                    </p>
+                    <span class="see-more" onclick="link1()">Click Here</span>
+                </div>
+                <div class="image1 image">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    function link1() {
+        window.open(`{{ url_for('student') }}`);
+    }
+    function link2() {
+        window.open(`{{ url_for('teacher') }}`);
+    }
+
+
+</script>
+
+</html>
